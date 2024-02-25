@@ -1,0 +1,73 @@
+{
+  "name": "tomchochola/php-template",
+  "description": "php template",
+  "type": "library",
+  "keywords": [
+    "tomchochola",
+    "php-template"
+  ],
+  "homepage": "https://github.com/tomchochola/php-template",
+  "readme": "./README.md",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Tomáš Chochola",
+      "email": "chocholatom1997@gmail.com",
+      "homepage": "https://github.com/tomchochola",
+      "role": "Author"
+    }
+  ],
+  "support": {
+    "email": "chocholatom1997@gmail.com",
+    "issues": "https://github.com/tomchochola/php-template/issues",
+    "source": "https://github.com/tomchochola/php-template.git",
+    "docs": "https://github.com/tomchochola/php-template"
+  },
+  "funding": [
+    {
+      "type": "github",
+      "url": "https://github.com/sponsors/tomchochola"
+    }
+  ],
+  "require": {
+    "php": "^8.3"
+  },
+  "require-dev": {
+    "tomchochola/php-cs-fixer-config": "@dev",
+    "tomchochola/phpstan-config": "@dev",
+    "phpunit/phpunit": "@stable"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tomchochola\\PhpTemplate\\": "./src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "./tests"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/tomchochola/php-cs-fixer-config.git"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/tomchochola/phpstan-config.git"
+    }
+  ],
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    },
+    "preferred-install": "dist",
+    "audit": {
+      "abandoned": "fail"
+    },
+    "optimize-autoloader": true,
+    "platform-check": true
+  }
+}
