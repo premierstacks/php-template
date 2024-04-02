@@ -20,7 +20,9 @@
 
 declare(strict_types=1);
 
-use Tomchochola\PhpCsFixerConfig\Configs\Tomchochola;
-use Tomchochola\PhpCsFixerConfig\Preset;
+namespace Tomchochola\PhpTemplate;
 
-return Preset::make(__DIR__, Tomchochola::config());
+class Main
+{
+    public static function main(): void {}
+}

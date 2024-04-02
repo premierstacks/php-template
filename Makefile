@@ -13,7 +13,7 @@ MAKE_COMPOSER ?= ${MAKE_PHP} ${MAKE_COMPOSER_2_BIN}
 
 # Goals
 .PHONY: check
-check: stan lint audit test
+check: lint stan test audit
 
 .PHONY: audit
 audit: ./vendor ./composer.lock ./node_modules ./package-lock.json
@@ -62,6 +62,10 @@ update:
 	${MAKE_COMPOSER} update
 	npm update --install-links --include prod --include dev --include peer --include optional
 
+.PHONY: serve
+serve: ./vendor/autoload.php
+	php -S 0.0.0.0:8000 -t ./public
+
 # Deploy / Release
 .PHONY: local
 local:
@@ -73,17 +77,17 @@ testing: local
 
 .PHONY: development
 development: testing
-	${MAKE_COMPOSER} install -a --no-dev
-	npm install --install-links --include prod --omit dev --include peer --include optional
 
 .PHONY: staging
-staging: development
+staging:
+	${MAKE_COMPOSER} install -a --no-dev
+	npm install --install-links --include prod --omit dev --include peer --include optional
 
 .PHONY: production
 production: staging
 
 # Dependencies
-./vendor ./composer.lock ./vendor/bin/phpstan ./vendor/bin/php-cs-fixer ./vendor/bin/phpunit:
+./vendor ./composer.lock ./vendor/bin/phpstan ./vendor/bin/php-cs-fixer ./vendor/bin/phpunit ./vendor/autoload.php:
 	${MAKE_COMPOSER} install
 
 ./node_modules ./package-lock.json ./node_modules/.bin/prettier ./node_modules/.bin/eslint:

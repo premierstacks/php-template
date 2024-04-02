@@ -20,7 +20,8 @@
 
 declare(strict_types=1);
 
-use Tomchochola\PhpCsFixerConfig\Configs\Tomchochola;
-use Tomchochola\PhpCsFixerConfig\Preset;
+require_once __DIR__ . '/../vendor/autoload.php';
 
-return Preset::make(__DIR__, Tomchochola::config());
+use Tomchochola\PhpTemplate\Main;
+
+Main::main();

@@ -20,7 +20,25 @@
 
 declare(strict_types=1);
 
-use Tomchochola\PhpCsFixerConfig\Configs\Tomchochola;
-use Tomchochola\PhpCsFixerConfig\Preset;
+namespace Tests\Unit;
 
-return Preset::make(__DIR__, Tomchochola::config());
+use PHPUnit\Framework\Attributes\CoversClass;
+use PHPUnit\Framework\Attributes\DoesNotPerformAssertions;
+use PHPUnit\Framework\Attributes\Small;
+use PHPUnit\Framework\Attributes\Test;
+use Tomchochola\PhpTemplate\Main;
+
+/**
+ * @internal
+ */
+#[Small]
+#[CoversClass(Main::class)]
+class MainTest extends TestCase
+{
+    #[Test]
+    #[DoesNotPerformAssertions]
+    public function testMain(): void
+    {
+        Main::main();
+    }
+}

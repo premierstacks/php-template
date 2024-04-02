@@ -30,12 +30,12 @@
     }
   ],
   "require": {
-    "php": "^8.3"
+    "php": "^8.3.0"
   },
   "require-dev": {
     "tomchochola/php-cs-fixer-config": "@dev",
     "tomchochola/phpstan-config": "@dev",
-    "phpunit/phpunit": "@stable"
+    "phpunit/phpunit": "^11.0.6"
   },
   "autoload": {
     "psr-4": {
