@@ -1,14 +1,14 @@
 {
-  "name": "@tomchochola/php-template",
+  "name": "@premierstacks/php-template",
   "description": "php template",
   "keywords": [
-    "tomchochola",
+    "premierstacks",
     "php-template"
   ],
-  "homepage": "https://github.com/tomchochola/php-template",
+  "homepage": "https://github.com/premierstacks/php-template",
   "bugs": {
     "email": "chocholatom1997@gmail.com",
-    "url": "https://github.com/tomchochola/php-template/issues"
+    "url": "https://github.com/premierstacks/php-template/issues"
   },
   "license": "SEE LICENSE IN ./LICENSE.md",
   "author": {
@@ -29,11 +29,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/tomchochola/php-template.git"
+    "url": "https://github.com/premierstacks/php-template.git"
   },
   "devDependencies": {
-    "@tomchochola/prettier-config": "github:tomchochola/prettier-config",
-    "@tomchochola/eslint-config": "github:tomchochola/eslint-config"
+    "@premierstacks/prettier-config": "github:premierstacks/prettier-config",
+    "@premierstacks/eslint-config": "github:premierstacks/eslint-config"
   },
   "private": true,
   "type": "module"

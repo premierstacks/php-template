@@ -1,4 +1,4 @@
-# [PHP Template](https://github.com/tomchochola/php-template) by [Tomáš Chochola](https://github.com/tomchochola)
+# [PHP Template](https://github.com/premierstacks/php-template) by [Tomáš Chochola](https://github.com/tomchochola)
 
 Launch PHP projects swiftly with our comprehensive template: it's equipped with top-tier configurations for quality and efficiency, catering to diverse use cases. Ideal for streamlined, robust development.
 
@@ -72,10 +72,10 @@ Review and ensure your license covers the usage of these dependencies, or remove
 
 The PHP Template is equipped with a comprehensive set of preconfigured features to enhance your development workflow and ensure adherence to best practices:
 
-- **ESLint**: Incorporates `@tomchochola/eslint-config` for JavaScript linting, ensuring code quality and consistency within embedded scripts or standalone JavaScript files.
-- **Prettier**: Configured with `@tomchochola/prettier-config` for code formatting, providing a unified code style across JavaScript and potentially other file formats.
-- **PHP CS Fixer**: Utilizes `tomchochola/php-cs-fixer-config` for PHP code styling, aligning your PHP code with industry standards and best practices.
-- **PHPStan**: Employs `tomchochola/phpstan-config` for static analysis, identifying potential issues in PHP code to maintain high code quality.
+- **ESLint**: Incorporates `@premierstacks/eslint-config` for JavaScript linting, ensuring code quality and consistency within embedded scripts or standalone JavaScript files.
+- **Prettier**: Configured with `@premierstacks/prettier-config` for code formatting, providing a unified code style across JavaScript and potentially other file formats.
+- **PHP CS Fixer**: Utilizes `premierstacks/php-cs-fixer-config` for PHP code styling, aligning your PHP code with industry standards and best practices.
+- **PHPStan**: Employs `premierstacks/phpstan-config` for static analysis, identifying potential issues in PHP code to maintain high code quality.
 - **PHPUnit**: Comes with a ready-to-use setup for unit testing with PHPUnit, fostering a test-driven development approach.
 - **Makefile Goals**: Includes versatile Makefile commands (`make local`, `make testing`, `make development`, `make staging`, `make production`, `make serve`, `make coverage`, `make check`, `make fix`) to streamline tasks like testing, linting, and deployment across various environments.
 - **Scalable Project Structure**: Provides a flexible foundation that supports a wide array of PHP project types, ensuring easy maintainability and scalability.

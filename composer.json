@@ -1,12 +1,12 @@
 {
-  "name": "tomchochola/php-template",
+  "name": "premierstacks/php-template",
   "description": "php template",
   "type": "library",
   "keywords": [
-    "tomchochola",
+    "premierstacks",
     "php-template"
   ],
-  "homepage": "https://github.com/tomchochola/php-template",
+  "homepage": "https://github.com/premierstacks/php-template",
   "readme": "./README.md",
   "license": "proprietary",
   "authors": [
@@ -19,9 +19,9 @@
   ],
   "support": {
     "email": "chocholatom1997@gmail.com",
-    "issues": "https://github.com/tomchochola/php-template/issues",
-    "source": "https://github.com/tomchochola/php-template.git",
-    "docs": "https://github.com/tomchochola/php-template"
+    "issues": "https://github.com/premierstacks/php-template/issues",
+    "source": "https://github.com/premierstacks/php-template.git",
+    "docs": "https://github.com/premierstacks/php-template"
   },
   "funding": [
     {
@@ -33,13 +33,13 @@
     "php": "^8.3.0"
   },
   "require-dev": {
-    "tomchochola/php-cs-fixer-config": "@dev",
-    "tomchochola/phpstan-config": "@dev",
+    "premierstacks/php-cs-fixer-config": "@dev",
+    "premierstacks/phpstan-config": "@dev",
     "phpunit/phpunit": "^11.0.6"
   },
   "autoload": {
     "psr-4": {
-      "Tomchochola\\PhpTemplate\\": "./src"
+      "Premierstacks\\PhpTemplate\\": "./src"
     }
   },
   "autoload-dev": {
@@ -51,12 +51,12 @@
   "prefer-stable": true,
   "repositories": [
     {
-      "type": "vcs",
-      "url": "https://github.com/tomchochola/php-cs-fixer-config.git"
+      "type": "git",
+      "url": "https://github.com/premierstacks/php-cs-fixer-config.git"
     },
     {
-      "type": "vcs",
-      "url": "https://github.com/tomchochola/phpstan-config.git"
+      "type": "git",
+      "url": "https://github.com/premierstacks/phpstan-config.git"
     }
   ],
   "config": {

@@ -22,6 +22,6 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use Tomchochola\PhpTemplate\Main;
+use Premierstacks\PhpTemplate\Main;
 
 Main::main();
