@@ -1,13 +1,13 @@
 {
-  "name": "premierstacks/php-template",
-  "description": "php template",
-  "type": "library",
+  "name": "premierstacks/php-app-template",
+  "description": "premierstacks php app template",
+  "type": "project",
   "keywords": [
     "premierstacks",
-    "php-template",
+    "php-app-template",
     "tomchochola"
   ],
-  "homepage": "https://github.com/premierstacks/php-template",
+  "homepage": "https://github.com/premierstacks/php-app-template",
   "readme": "./README.md",
   "license": "proprietary",
   "authors": [
@@ -20,9 +20,9 @@
   ],
   "support": {
     "email": "chocholatom1997@gmail.com",
-    "issues": "https://github.com/premierstacks/php-template/issues",
-    "source": "https://github.com/premierstacks/php-template.git",
-    "docs": "https://github.com/premierstacks/php-template"
+    "issues": "https://github.com/premierstacks/php-app-template/issues",
+    "source": "https://github.com/premierstacks/php-app-template.git",
+    "docs": "https://github.com/premierstacks/php-app-template"
   },
   "funding": [
     {
@@ -34,9 +34,9 @@
     "php": "^8.3"
   },
   "require-dev": {
+    "phpunit/phpunit": "^11.3",
     "premierstacks/php-cs-fixer-stack": "@dev",
-    "premierstacks/phpstan-stack": "@dev",
-    "phpunit/phpunit": "^11.3"
+    "premierstacks/phpstan-stack": "@dev"
   },
   "autoload": {
     "psr-4": {
@@ -52,12 +52,12 @@
   "prefer-stable": true,
   "repositories": [
     {
-      "type": "git",
-      "url": "https://github.com/premierstacks/php-cs-fixer-stack.git"
+      "type": "path",
+      "url": "../php-cs-fixer-stack"
     },
     {
-      "type": "git",
-      "url": "https://github.com/premierstacks/phpstan-stack.git"
+      "type": "path",
+      "url": "../phpstan-stack"
     }
   ],
   "config": {
