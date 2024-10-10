@@ -3,9 +3,9 @@
   "description": "premierstacks php app template",
   "type": "project",
   "keywords": [
+    "tomchochola",
     "premierstacks",
-    "php-app-template",
-    "tomchochola"
+    "php-app-template"
   ],
   "homepage": "https://github.com/premierstacks/php-app-template",
   "readme": "./README.md",
@@ -31,7 +31,7 @@
     }
   ],
   "require": {
-    "php": "^8.3"
+    "php": "8.3.*"
   },
   "require-dev": {
     "phpunit/phpunit": "^11.3",
@@ -52,12 +52,12 @@
   "prefer-stable": true,
   "repositories": [
     {
-      "type": "path",
-      "url": "../php-cs-fixer-stack"
+      "type": "git",
+      "url": "https://github.com/premierstacks/php-cs-fixer-stack.git"
     },
     {
-      "type": "path",
-      "url": "../phpstan-stack"
+      "type": "git",
+      "url": "https://github.com/premierstacks/phpstan-stack.git"
     }
   ],
   "config": {
