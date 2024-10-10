@@ -2,7 +2,15 @@
 
 ✨ _**Clone and Win!**_
 
+The PHP App Template provides a comprehensive starting point for building PHP applications. With pre-configured setups for code quality tools, linters, and testing frameworks, this template is designed to streamline development and ensure consistent standards across projects.
+
 ## What is PHP App Template?
+
+The PHP App Template is part of the Premierstacks collection and serves as a foundational structure for creating PHP applications. It comes pre-configured with various tools and packages, including code quality checkers, static analysis, automatic formatting, and unit testing, making it an ideal starting point for any PHP-based project.
+
+The template includes configurations for popular tools like PHPStan, ESLint, Prettier, and PHP CS Fixer, along with dotfiles for common project settings such as .editorconfig, .gitignore, and .gitattributes. It also provides a structured Makefile for common commands and environment provisioning, enabling you to quickly set up local, testing, development, staging, and production environments.
+
+This template’s flexibility allows developers to easily customize or remove components to fit specific project needs. Whether you’re building a pure PHP application or integrating with frameworks like Laravel, the PHP App Template is designed to save time, maintain consistency, and ensure high code quality throughout the project’s lifecycle.
 
 ## What is Tomchochola
 
@@ -167,6 +175,9 @@ make distclean
 
 # run before every commit
 make commit
+
+# images/assets compression
+make compress
 ```
 
 ## About the Creator
