@@ -5,8 +5,8 @@ SHELL := /bin/bash
 .DEFAULT_GOAL := never
 
 # Variables
-SOURCES = $(shell find . -maxdepth 1 -type f) $(shell find ./src ./tests ./public -type f)
-PHP_SOURCES = $(shell find ./src ./tests ./public -type f -iname '*.php')
+SOURCES = $(shell rg --files --hidden --iglob '!.git')
+PHP_SOURCES = $(shell rg --files --hidden --iglob '!.git' --iglob '*.php')
 
 MAKE_PHP_8_3_EXE ?= php8.3
 MAKE_COMPOSER_2_EXE ?= /usr/local/bin/composer
@@ -49,8 +49,8 @@ commit: tree fix fix fix check compress
 .PHONY: compress
 compress: ./node_modules/svgo_stamp
 
-./node_modules/svgo_stamp: ./node_modules/.bin/svgo $(shell find ./public -type f -iname '*.svg')
-	find ./public -type f -iname '*.svg' -newer ./node_modules/svgo_stamp -exec ./node_modules/.bin/svgo --multipass --eol=lf --indent=2 --final-newline -i {} \;
+./node_modules/svgo_stamp: ./node_modules/.bin/svgo $(shell rg --files --hidden --iglob '!.git' --iglob '*.svg')
+	rg --files --hidden --iglob '!.git' --iglob '*.svg' | xargs -n 1 -P 0 ./node_modules/.bin/svgo --multipass --eol=lf --indent=2 --final-newline
 	touch ./node_modules/svgo_stamp
 
 .PHONY: coverage
@@ -141,48 +141,38 @@ stan_phpstan: ./vendor/phpstan_stamp
 test: test_phpunit
 
 .PHONY: test_phpunit
-test_phpunit: ./vendor/phpunit_stamp
+test_phpunit: ./.phpunit.coverage/html
 
-./vendor/phpunit_stamp ./.phpunit.coverage/html: ./vendor/bin/phpunit ./phpunit.xml ${PHP_SOURCES}
+./.phpunit.coverage/html: ./vendor/bin/phpunit ./phpunit.xml ${PHP_SOURCES}
 	${MAKE_PHP} ./vendor/bin/phpunit
-	touch ./vendor/phpunit_stamp
 
 .PHONY: testing
 testing: ./vendor/classmap
 
 .PHONY: tree
-tree: clean
+tree: ./README.md
 	sed -i '/## Tree/,$$d' README.md
 	echo '## Tree' >> README.md
 	echo '' >> README.md
 	echo 'The following is a breakdown of the folder and file structure within this repository. It provides an overview of how the code is organized and where to find key components.' >> README.md
 	echo '' >> README.md
 	echo '```bash' >> README.md
-	tree >> README.md
+	rg --files --hidden --iglob '!.git' | tree --fromfile >> README.md
 	echo '```' >> README.md
 
-.PHONY: update
-update: update_npm update_composer
-
-.PHONY: update_composer
-update_composer: package.json
-	${MAKE_COMPOSER} update
-
-.PHONY: update_npm
-update_npm: package.json
-	npm update --install-links --include prod --include dev --include peer --include optional
-
 # Dependencies
-package-lock.json ./node_modules ./node_modules/.bin/eslint ./node_modules/.bin/prettier ./node_modules/.bin/svgo: package.json
+./package-lock.json ./node_modules ./node_modules/.bin/eslint ./node_modules/.bin/prettier ./node_modules/.bin/svgo: ./package.json
+	rm -rf ./node_modules
 	npm install --install-links --include prod --include dev --include peer --include optional
 
-./composer.lock ./vendor ./vendor/bin/php-cs-fixer ./vendor/bin/phpstan ./vendor/bin/phpunit ./vendor/autoload.php ./vendor/composer/autoload_real.php: composer.json
+ ./composer.lock ./vendor ./vendor/bin/php-cs-fixer ./vendor/bin/phpstan ./vendor/bin/phpunit ./vendor/autoload.php ./vendor/composer/autoload_real.php: ./composer.json
+	rm -rf ./vendor
 	${MAKE_COMPOSER} install
 
-./vendor/classmap: ./vendor/autoload.php ./vendor/composer/autoload_real.php ${PHP_SOURCES} composer.json
+./vendor/classmap: ./vendor/autoload.php ./vendor/composer/autoload_real.php ${PHP_SOURCES}
 	${MAKE_COMPOSER} dump-autoload -o --dev --strict-psr
 	touch ./vendor/classmap
 
-./vendor/authoritative: ./vendor/autoload.php ./vendor/composer/autoload_real.php ${PHP_SOURCES} composer.json
+./vendor/authoritative: ./vendor/autoload.php ./vendor/composer/autoload_real.php ${PHP_SOURCES}
 	${MAKE_COMPOSER} dump-autoload -a --no-dev --strict-psr
 	touch ./vendor/authoritative

@@ -70,51 +70,87 @@ For full licensing terms, refer to the LICENSE.md file accompanying this softwar
 
 ## Preconfigured Features
 
-This template includes the following features:
+This template comes with a complete set of pre-configured tools and libraries to support a high-quality PHP development environment. It includes configurations for code quality, linting, and testing tools, making it a robust foundation for various PHP projects.
 
-**1. [https://github.com/premierstacks/php-stack](https://github.com/premierstacks/php-stack)**
+### PHP stack
 
-php utility library
+Powered by [https://github.com/premierstacks/php-stack](https://github.com/premierstacks/php-stack).
 
-**2. [https://github.com/premierstacks/phpstan-stack](https://github.com/premierstacks/phpstan-stack)**
+A collection of reusable PHP utilities and helpers to enhance code maintainability and consistency. Provides standardized functions and classes to simplify common PHP development tasks.
 
-phpstan template, [/phpstan.neon](/phpstan.neon)
+### PHPStan
 
-**3. [https://github.com/premierstacks/prettier-stack](https://github.com/premierstacks/prettier-stack)**
+Powered by [https://github.com/premierstacks/phpstan-stack](https://github.com/premierstacks/phpstan-stack).
 
-prettier template, [/prettier.config.js](/prettier.config.js), [/.prettierignore](/.prettierignore)
+Pre-configured static analysis for detecting potential issues and enforcing code quality standards.
 
-**4. [https://github.com/premierstacks/eslint-stack](https://github.com/premierstacks/eslint-stack)**
+Configuration: [/phpstan.neon](/phpstan.neon).
 
-eslint template, [/eslint.config.js](/eslint.config.js)
+### Prettier
 
-**5. [https://github.com/premierstacks/php-cs-fixer-stack](https://github.com/premierstacks/php-cs-fixer-stack)**
+Powered by [https://github.com/premierstacks/prettier-stack](https://github.com/premierstacks/prettier-stack).
 
-php-cs-fixer template, [/.php-cs-fixer.php](/.php-cs-fixer.php)
+A universal code formatter that ensures consistent style across different file types, including PHP, JavaScript, and JSON.
 
-**6. phpunit**
+Files: [/prettier.config.js](/prettier.config.js), [/.prettierignore](/.prettierignore).
 
-unit testing, [/phpunit.xml](/phpunit.xml), [/tests](/tests)
+### ESLint
 
-**7. dot files**
+Powered by [https://github.com/premierstacks/eslint-stack](https://github.com/premierstacks/eslint-stack).
 
-[/.editorconfig](/.editorconfig), [/.gitignore](/.gitignore), [/.gitattributes](/.gitattributes)
+Linting configuration for JavaScript and TypeScript, ideal for projects that include frontend integrations.
 
-**8. Makefile**
+Files: [/eslint.config.js](/eslint.config.js).
 
-CLI commands implemented in using make, [/Makefile](/Makefile)
+### PHP CS Fixer
 
-**9. Composer**
+Powered by [https://github.com/premierstacks/php-cs-fixer-stack](https://github.com/premierstacks/php-cs-fixer-stack)
 
-php package manager, [/composer.json](/composer.json)
+Automated code style fixer with a pre-defined set of rules for consistent PHP formatting.
 
-**10. NPM**
+Files: [/.php-cs-fixer.php](/.php-cs-fixer.php).
 
-node package manager, [/package.json](/package.json)
+### PHPUnit
 
-**11. entrypoint**
+Pre-configured unit testing framework to validate functionality and ensure code reliability.
 
-public entrypoint, [/public/index.php](/public/index.php)
+Files: [/phpunit.xml](/phpunit.xml), [/tests](/tests).
+
+### Project Files
+
+Common project configuration files to standardize the development environment and enforce consistent settings across tools and editors.
+
+Files: [/.editorconfig](/.editorconfig), [/.gitignore](/.gitignore), [/.gitattributes](/.gitattributes).
+
+### Makefile Automation
+
+Includes a structured Makefile for streamlined command-line automation, covering environment setup, testing, and code quality checks.
+
+Files: [/Makefile](/Makefile).
+
+### Composer
+
+Configured with a composer.json file for managing PHP dependencies and autoloading. This ensures that PHP packages are handled efficiently.
+
+Files: [/composer.json](/composer.json).
+
+### NPM
+
+Includes npm for managing JavaScript dependencies, making it easy to integrate with frontend tools.
+
+Files: [/package.json](/package.json).
+
+### Entrypoint
+
+A basic PHP entrypoint file for the application, serving as a starting point for further customization.
+
+Files: [/public/index.php](/public/index.php).
+
+### Asset Optimization
+
+Support for image and asset compression ensuring that files are optimized for performance and fast load times.
+
+Commands: `make compress`.
 
 ## Getting Started
 
@@ -210,6 +246,11 @@ The following is a breakdown of the folder and file structure within this reposi
 
 ```bash
 .
+├── .editorconfig
+├── .gitattributes
+├── .gitignore
+├── .php-cs-fixer.php
+├── .prettierignore
 ├── AUTHORS.md
 ├── LICENSE.md
 ├── Makefile
@@ -229,5 +270,5 @@ The following is a breakdown of the folder and file structure within this reposi
         ├── MainTest.php
         └── TestCase.php
 
-4 directories, 14 files
+4 directories, 19 files
 ```
