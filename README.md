@@ -85,7 +85,7 @@ Use the `Use this template` button on the GitHub repository page to create a new
 Or clone the repository using the following command:
 
 ```bash
-git clone https://github.com/premierstacks/php-app-template.git php-app
+git clone https://github.com/premierstacks/php-app-template.git
 ```
 
 **4. Customize Your Project**
@@ -112,18 +112,20 @@ make staging
 # provision for production environment
 make production
 
+# start dev server
+make start / make serve / make server
+
 # run automatic code fixers
 make fix
 
 # run linters, static analysis, tests and audit
 make check
 
-# browser phpunit code coverage
+# browsee phpunit code coverage
 make coverage
 
 # clean up the project
 make clean
-make distclean
 
 # run before every commit
 make commit

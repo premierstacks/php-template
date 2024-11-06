@@ -6,8 +6,5 @@ namespace Premierstacks\PhpTemplate;
 
 class Main
 {
-    public static function main(): void
-    {
-        echo static::class;
-    }
+    public static function main(): void {}
 }
