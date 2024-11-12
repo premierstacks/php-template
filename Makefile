@@ -47,7 +47,7 @@ compress: ./node_modules/.bin/svgo $(shell rg --files --hidden --iglob '!.git' -
 	rg --files --hidden --iglob '!.git' --iglob '*.svg' | xargs -n 1 -P 0 ./node_modules/.bin/svgo --multipass --eol=lf --indent=2 --final-newline
 
 .PHONY: coverage
-coverage: ./.phpunit.coverage/html
+coverage: test ./.phpunit.coverage/html
 	${MAKE_PHP} -S 0.0.0.0:8000 -t ./.phpunit.coverage/html
 
 .PHONY: development
@@ -115,9 +115,7 @@ start: local
 test: test_phpunit
 
 .PHONY: test_phpunit
-test_phpunit: ./.phpunit.coverage/html
-
-./.phpunit.coverage/html: ./vendor/bin/phpunit ./phpunit.xml
+test_phpunit: ./vendor/bin/phpunit ./phpunit.xml
 	${MAKE_COMPOSER} dump-autoload -o --dev --strict-psr
 	${MAKE_PHP} ./vendor/bin/phpunit
 
