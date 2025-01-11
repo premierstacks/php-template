@@ -127,23 +127,23 @@ The following is a breakdown of the folder and file structure within this reposi
 
 ```bash
 .
+├── AUTHORS.md
+├── composer.json
 ├── .editorconfig
+├── eslint.config.js
 ├── .gitattributes
 ├── .gitignore
-├── .php-cs-fixer.php
-├── .prettierignore
-├── AUTHORS.md
-├── LICENSE.md
+├── LICENSE
 ├── Makefile
-├── README.md
-├── composer.json
-├── eslint.config.js
 ├── package.json
+├── .php-cs-fixer.php
 ├── phpstan.neon
 ├── phpunit.xml
 ├── prettier.config.js
+├── .prettierignore
 ├── public
 │   └── index.php
+├── README.md
 ├── src
 │   └── Main.php
 └── tests
@@ -151,5 +151,5 @@ The following is a breakdown of the folder and file structure within this reposi
         ├── MainTest.php
         └── TestCase.php
 
-4 directories, 19 files
+5 directories, 19 files
 ```
