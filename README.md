@@ -1,6 +1,6 @@
-# [PHP App Template](https://github.com/premierstacks/php-app-template) by [Tomáš Chochola](https://github.com/tomchochola)
+# [PHP Template](https://github.com/premierstacks/php-template) by [Tomáš Chochola](https://github.com/tomchochola)
 
-The PHP App Template provides a comprehensive starting point for building PHP applications. With pre-configured setups for code quality tools, linters, and testing frameworks, this template is designed to streamline development and ensure consistent standards across projects.
+The PHP Template provides a comprehensive starting point for building PHP applications. With pre-configured setups for code quality tools, linters, and testing frameworks, this template is designed to streamline development and ensure consistent standards across projects.
 
 ## What is Premierstacks
 
