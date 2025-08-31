@@ -99,7 +99,7 @@ make staging
 make production
 
 # start dev server
-make start / make serve / make server
+make start
 
 # run automatic code fixers
 make fix
@@ -120,36 +120,3 @@ make clean
 **👨 GitHub Personal: [https://github.com/tomchochola](https://github.com/tomchochola)**<br />
 **🏢 GitHub Organization: [https://github.com/premierstacks](https://github.com/premierstacks)**<br />
 **💰 GitHub Sponsors: [https://github.com/sponsors/tomchochola](https://github.com/sponsors/tomchochola)**<br />
-
-## Tree
-
-The following is a breakdown of the folder and file structure within this repository. It provides an overview of how the code is organized and where to find key components.
-
-```bash
-.
-├── AUTHORS.md
-├── composer.json
-├── .editorconfig
-├── eslint.config.js
-├── .gitattributes
-├── .gitignore
-├── LICENSE
-├── Makefile
-├── package.json
-├── .php-cs-fixer.php
-├── phpstan.neon
-├── phpunit.xml
-├── prettier.config.js
-├── .prettierignore
-├── public
-│   └── index.php
-├── README.md
-├── src
-│   └── Main.php
-└── tests
-    └── Unit
-        ├── MainTest.php
-        └── TestCase.php
-
-5 directories, 19 files
-```
